@@ -40,10 +40,9 @@ nlp/
 ## Objectives
 
 1. Load and preprocess text data for spam detection.  
-2. Implement traditional ML models using TF-IDF features.  
+2. Implement traditional ML models using TF-IDF features and Bag Of Word.  
 3. Implement an embedding-based model using averaged Word2Vec vectors.  
 4. Evaluate and compare the performance of both approaches.  
-5. Draw conclusions and identify possible improvements.
 
 ---
 
@@ -95,21 +94,19 @@ Open and execute the notebooks in this order:
 
 ## Notebook Details
 
-1. SpamAndHamPrediction.ipynb:
+### 1. SpamAndHamPrediction.ipynb:
                   
-**Goal**: Build a baseline model using TF-IDF features. 
+**Goal**: Build a baseline model using TF-IDF features and Bag Of Words. 
 
 **Key Steps:**
   * Data loading and cleaning
   * Tokenization, lowercasing, stopword removal
-  * Feature extraction via TF-IDF
-  * Training models such as:
-    - Logistic Regression
-    - Naive Bayes
-    - Support Vector Machine (SVM)
+  * Feature extraction via TF-IDF and Bag Of Words
+  * Training model:
+    - Naive Bayes  
   * Evaluation with accuracy, precision, recall, and F1-score
 
-2. SpamHamUsingWord2vecAvgWord2vec.ipynb
+### 2. SpamHamUsingWord2vecAvgWord2vec.ipynb
 
 **Goal:** Use Word2Vec embeddings to represent text semantically.
 
@@ -119,25 +116,11 @@ Open and execute the notebooks in this order:
 
 * Averaging word vectors for each message
 
-* Classifier training (e.g., Logistic Regression, RandomForest)
+* Classifier training (Naive Bayes)
 
 * Comparison with TF-IDF model performance
 
-## Results Summary
 
-| Model                | Feature Type  | Accuracy | Precision | Recall | F1-Score |
-|----------------------|---------------|-----------|------------|---------|-----------|
-| Logistic Regression  | TF-IDF        | xx%       | xx%        | xx%     | xx%       |
-| RandomForest         | Word2Vec Avg  | xx%       | xx%        | xx%     | xx%       |
-
----
-
-### Interpretation
-
-TF-IDF models tend to perform well for **spam classification** due to keyword-based patterns,  
-while **Word2Vec embeddings** capture deeper semantic meaning, potentially improving generalization.
-
----
 
 ## Technologies Used
 
